@@ -1,0 +1,122 @@
+:root {
+    --primary-color: #a5f3fc;
+    --shadow: 0 0 5px 5px rgba(0, 0, 0, 0.3);
+    --border-style: 3px solid #203647;
+}
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+}
+
+body {
+    font-size: 32px;
+    font-family: 'Bebas Neue', cursive, sans-serif;
+    font-weight: 700;
+}
+
+.main-container {
+    height: 100%;
+
+    display: grid;
+    grid-template-rows: 15% 70% 15%;
+}
+
+.container {
+    /* display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center; */
+
+    background-color: var(--primary-color);
+    text-align: center;
+    padding: 1.5%;
+    max-height: 200px;
+    font-size: 3.5vh;
+    box-shadow: var(--shadow);
+    -moz-box-shadow: var(--shadow);
+    -webkit-box-shadow: var(--shadow);
+    -o-box-shadow: var(--shadow);
+}
+
+header {
+    z-index: 1;
+}
+
+main {
+    display: grid;
+    grid-template: 20% 65% 15% / 80%;
+    justify-content: center;
+
+    background-color: whitesmoke;
+}
+
+.col-12 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.score-board {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding-top: 10px;
+}
+
+.player {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.game-board {
+    display: grid;
+    grid-template: repeat(3, 80px) / repeat(3, 80px);
+}
+
+.btn {
+    font-size: 2em;
+    font-weight: inherit;
+    border: none;
+    border-right: var(--border-style);
+    border-bottom: var(--border-style);
+    background-color: inherit;
+}
+
+.btn-none-border-bot {
+    border-bottom: none;
+}
+
+.btn-none-border-right {
+    border-right: none;
+}
+
+.btn-restart {
+    padding: 15px 30px;
+    border-radius: 5px;
+    font-size: 3vh;
+    font-weight: inherit;
+}
+
+.btn-restart:hover {
+    filter: brightness(90%);
+}
+
+footer {
+    font-size: 1.5vh;
+}
+
+footer a {
+    color: black;
+}
