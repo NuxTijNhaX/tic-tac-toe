@@ -23,12 +23,12 @@
         <div class="col-12">
             <div class="score-board">
                 <div class="player">
-                    <p class="x-name">DevNhaX</p>
+                    <p id="x-name">DevNhaX</p>
                     <p class="score">5</p>        
                 </div>
     
                 <div class="player">
-                    <p class="0-name">Bot</p>
+                    <p id="o-name">Bot</p>
                     <p class="score">0</p>
                 </div>
             </div>
@@ -38,13 +38,13 @@
             <div class="game-board">
                 <button class="btn">X</button>
                 <button class="btn">O</button>
-                <button class="btn btn-none-border-right"></button>
-                <button class="btn"></button>
-                <button class="btn"></button>
-                <button class="btn btn-none-border-right"></button>
-                <button class="btn btn-none-border-bot"></button>
-                <button class="btn btn-none-border-bot"></button>
-                <button class="btn btn-none-border-right btn-none-border-bot"></button>
+                <button class="btn btn-none-border-right">X</button>
+                <button class="btn">O</button>
+                <button class="btn">X</button>
+                <button class="btn btn-none-border-right">O</button>
+                <button class="btn btn-none-border-bot">X</button>
+                <button class="btn btn-none-border-bot">O</button>
+                <button class="btn btn-none-border-right btn-none-border-bot">X</button>
             </div>
         </div>
 
@@ -63,24 +63,32 @@
     </footer>
     </div>
 
-    <div class="starting-game">
+    <div class="starting-game active" id="starting-game">
         <form>
+            <p>prepare for the battle</p>
             <div class="players-setup">
-                <div class="x-player">
-                    <label for="">X-Player's Name:</label>
-                    <input type="text" name="" id="" placeholder="Enter name here...">
+                <div class="x-player player-input">
+                    <label for="xName">X-Player's Name:</label>
+                    <input type="text" name="xName" id="xName" placeholder="Enter name here..." required>
                 </div>
                 <div class="o-player">
-                    <label for="">O-Player's Name:</label>
-                    <input type="text" name="" id="" placeholder="Enter name here...">
+                    <label for="oName">O-Player's Name:</label>
+                    <input type="text" name="oName" id="oName" placeholder="Enter name here..." required>
                 </div>
             </div>
             <div class="difficul-level">
-                
+                <label for="difficult">Level of difficult: </label>
+                <select name="difficult" id="difficult">
+                    <option value="e">Easy</option>
+                    <option value="m">Medium</option>
+                    <option value="h">Hard</option>
+                </select>
             </div>
-            <button type="submit">Start Game</button>
+            <button id="btn-start" type="submit">Start Game</button>
         </form>
     </div>
+
+    <div class="overlay active" id="overlay"></div>
 
     <script src="./main.js"></script>
 </body>

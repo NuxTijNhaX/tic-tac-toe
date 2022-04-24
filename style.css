@@ -102,7 +102,7 @@ main {
     border-right: none;
 }
 
-.btn-restart {
+.btn-restart, #btn-start {
     padding: 15px 30px;
     border-radius: 5px;
     font-size: 3vh;
@@ -119,4 +119,70 @@ footer {
 
 footer a {
     color: black;
+}
+
+.starting-game {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    box-shadow: var(--shadow);
+    -moz-box-shadow: var(--shadow);
+    -webkit-box-shadow: var(--shadow);
+    -o-box-shadow: var(--shadow);
+
+    background-color:aliceblue;
+    width: 40%;
+    height: 60%;
+
+    z-index: 1;
+
+    display: none;
+}
+
+.starting-game > form {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    gap: 20px;
+    padding: 5%;
+    height: 100%;
+
+}
+
+.starting-game label + input {
+    font-size: 28px;
+}
+
+.starting-game input {
+    border-style: none;
+    border-radius: 7px;
+    padding: 7px 10px;
+}
+
+.x-player {
+    margin-bottom: 7px;
+}
+
+.difficul-level > select {
+    font-size: 0.7em;
+    font-family: inherit;
+    border-radius: 7px;
+}
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+
+    display: none;
+}
+
+.overlay.active, .starting-game.active {
+    display: block;
 }
